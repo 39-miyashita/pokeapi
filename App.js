@@ -6,7 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
+      <Text style={{color : 'red',
+      position: 'relative',
+      width: 200,
+      height: 200,
+    }}>ポケモンシルエットクイズ</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
@@ -18,7 +22,7 @@ function HomeScreen({ navigation }) {
 function DetailsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
+      <Text></Text>
       <Button
         title="Go to Details... again"
         onPress={() => navigation.push('Details')}
@@ -41,4 +45,4 @@ function App() {
 }
 
 export default App;
-a
+
