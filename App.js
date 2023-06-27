@@ -11,21 +11,22 @@ function HomeScreen({ navigation }) {
       width: 200,
       height: 200,
     }}>ポケモンシルエットクイズ</Text>
+
       <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
+        title="コレクションページ"
+        onPress={() => navigation.navigate('Collection')}
       />
     </View>
   );
 }
 
-function DetailsScreen({ navigation }) {
+function CollectionScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text></Text>
       <Button
-        title="Go to Details... again"
-        onPress={() => navigation.push('Details')}
+        title="タイトルへ戻る"
+        onPress={() => navigation.push('Home')}
       />
     </View>
   );
@@ -37,8 +38,8 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'ポケモンシルエットクイズ' }}/>
+        <Stack.Screen name="Collection" component={CollectionScreen} options={{ title: 'コレクション' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -46,3 +47,7 @@ function App() {
 
 export default App;
 
+//      <Button
+// title="PLAY"
+// onPress={() => navigation.navigate('Details')}
+// />
