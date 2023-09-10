@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.22aw0139miyashita.myapp"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "46ef865d-9cdf-45eb-afbe-7e6a9c0912c8"
+      }
     }
   }
 }
